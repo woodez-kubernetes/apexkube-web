@@ -19,6 +19,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/apexkube-website:${{ github.sha }} .
+          docker tag kwood475/apexkube-website:${{ github.sha }} kwood475/apexkube-website:latest
           docker tag ${{ secrets.DOCKER_USERNAME }}/apexkube-website:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/woodez-website:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/apexkube-website:${{ github.sha }}
           docker push ${{ secrets.DOCKER_USERNAME }}/apexkube-website:latest

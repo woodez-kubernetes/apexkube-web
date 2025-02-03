@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/woodez-kubernetes/apexkube-website.git
+    repoURL: https://github.com/woodez-kubernetes/apexkube-web.git
     targetRevision: master
     path: manifests
   destination:
