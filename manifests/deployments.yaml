@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apexkube-website
+  labels:
+    app: apexkube-website
+  namespace: woodez
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apexkube-website
+  template:
+    metadata:
+      labels:
+        app: apexkube-website
+    spec:
+      containers:
+      - name: apexkube-website
+        image: kwood475/apexkube-website:latest
+        ports:
+        - containerPort: 443
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apexkube-website-service 
+  labels:
+    app: apexkube-website
+  namespace: woodez
+spec:
+  ports:
+  - port: 443
+    protocol: TCP
+  selector:
+    app: apexkube-website
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-apexkube-website
+  namespace: woodez
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: www.apexkube.xyz
+    http:
+      paths:
+      - backend:
+          service:
+            name: apexkube-website-service
+            port:
+              number: 443
+        path: /
+        pathType: Prefix
