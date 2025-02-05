@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-apexkube-website
+  namespace: woodez
+spec:  
+  ingressClassName: nginx
+  tls:
+  - hosts: 
+      - www.apexkube.xyz
+    secretName: testsecret-tls
+  rules: 
+  - host: www.apexkube.xyz
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: apexkube-website-service
+            port:
+              number: 443
