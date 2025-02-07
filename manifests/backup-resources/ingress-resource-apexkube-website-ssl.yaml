@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"name":"ingress-apexkube-website","namespace":"woodez"},"spec":{"ingressClassName":"nginx","rules":[{"host":"www.apexkube.xyz","http":{"paths":[{"backend":{"service":{"name":"apexkube-website-service","port":{"number":443}}},"path":"/","pathType":"Prefix"}]}}],"tls":[{"hosts":["www.apexkube.xyz"],"secretName":"testsecret-tls"}]}}
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  creationTimestamp: "2025-02-05T20:09:09Z"
+  generation: 3
+  name: ingress-apexkube-website
+  namespace: woodez
+  resourceVersion: "6238419"
+  uid: 40777730-5938-448b-815c-e8087f4a761b
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: www.apexkube.xyz
+    http:
+      paths:
+      - backend:
+          service:
+            name: apexkube-website-service
+            port:
+              number: 443
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - www.apexkube.xyz
+    secretName: testsecret-tls
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.2.113
