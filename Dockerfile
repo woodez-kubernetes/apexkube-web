@@ -2,6 +2,7 @@ FROM nginx:latest
 RUN mkdir -p /etc/nginx/conf.d
 COPY ./index.html /usr/share/nginx/html/index.html
 COPY ./wke.html /usr/share/nginx/html/wke.html
+COPY ./test.html /usr/share/nginx/html/test.html
 COPY ./apexkubelogo.jpeg /usr/share/nginx/html/images/apexkubelogo.jpeg
 COPY ./wke.jpeg /usr/share/nginx/html/images/wke.jpeg
 COPY ./assets/ /usr/share/nginx/html/.
