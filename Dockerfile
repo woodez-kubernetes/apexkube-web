@@ -4,6 +4,7 @@ COPY ./index.html /usr/share/nginx/html/index.html
 COPY ./wke.html /usr/share/nginx/html/wke.html
 COPY ./apexkubelogo.jpeg /usr/share/nginx/html/images/apexkubelogo.jpeg
 COPY ./wke.jpeg /usr/share/nginx/html/images/wke.jpeg
+COPY ./assets/ /usr/share/nginx/html/.
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # certs
 COPY ./apexkube.crt /etc/ssl/certs/
