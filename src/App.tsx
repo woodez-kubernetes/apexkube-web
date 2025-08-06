@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navigation from './components/Navigation'
 import About from './pages/About'
+import Pricing from './pages/Pricing'
 import './App.css'
 
 type Page = 'about' | 'pricing'
@@ -13,10 +14,7 @@ function App() {
       case 'about':
         return <About />
       case 'pricing':
-        return <div className="page-content">
-          <h2>Pricing</h2>
-          <p>Pricing information coming soon...</p>
-        </div>
+        return <Pricing />
       default:
         return <About />
     }
