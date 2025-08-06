@@ -12,11 +12,14 @@ const About: FC = () => {
               className="logo-img" 
               alt="ApexKube Logo"
             />
+            <img 
+              src="/ai-hero-image.jpg" 
+              className="ai-hero-img" 
+              alt="AI Technology Visualization"
+            />
           </div>
           
           <div className="text-content">
-            <h1 className="page-title">About ApexKube</h1>
-            
             <div className="description">
               <p>
                 In today's rapidly evolving digital landscape, businesses need more than just technology—they need <strong>intelligent solutions</strong> that understand both innovation and culture.
