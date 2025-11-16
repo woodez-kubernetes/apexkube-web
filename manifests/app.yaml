@@ -6,7 +6,7 @@ metadata:
 spec:
   source:
     repoURL: https://github.com/woodez-kubernetes/apexkube-web.git
-    targetRevision: master
+    targetRevision: release-dev
     path: manifests
   destination:
     server: https://kubernetes.default.svc # Use your own cluster server

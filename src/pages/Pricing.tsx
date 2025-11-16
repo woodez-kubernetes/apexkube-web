@@ -7,7 +7,7 @@ const Pricing: FC = () => {
       <div className="content-container">
         <div className="content-card">
           <div className="header-section">
-            <h1 className="page-title">AI Consulting Pricing</h1>
+            <h1 className="page-title">AI Enabled Consulting Pricing</h1>
             <p className="page-subtitle">
               Choose the perfect AI transformation package for your business
             </p>
