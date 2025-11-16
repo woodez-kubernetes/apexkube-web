@@ -22,7 +22,7 @@ const About: FC = () => {
           <div className="text-content">
             <div className="description">
               <p>
-                In today's rapidly evolving digital landscape, businesses need more than just technology—they need <strong>intelligent solutions</strong> that understand both innovation and culture.
+                Kevin : In today's rapidly evolving digital landscape, businesses need more than just technology—they need <strong>intelligent solutions</strong> that understand both innovation and culture.
               </p>
               
               <p>
