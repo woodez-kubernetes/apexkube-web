@@ -38,7 +38,6 @@ const About: FC = () => {
                 <ul>
                   <li><strong>AI-First Approach:</strong> We leverage the latest in machine learning, automation, and intelligent systems</li>
                   <li><strong>Cultural Intelligence:</strong> We understand that technology success depends on people and organizational fit</li>
-                  <li><strong>Vibe Consulting:</strong> We ensure solutions align with your company's energy, values, and working style</li>
                   <li><strong>Practical Innovation:</strong> We focus on AI implementations that deliver real business value</li>
                 </ul>
               </div>
